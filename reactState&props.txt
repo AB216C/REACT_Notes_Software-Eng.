@@ -1,0 +1,73 @@
+React is a popular JavaScript library for building user interfaces. Two of its core concepts are state and props. Understanding these two concepts is key to building dynamic, responsive components in React.
+
+What is State?
+State is an object that holds data that may change over time. Each component in React can manage its own state. When the state changes, React automatically re-renders the component to reflect the updated data.
+
+Key Points:
+Local to the component: State is managed within a component, meaning it is private and fully controlled by the component.
+Mutable: Unlike props, state can change (mutate) within a component.
+Triggers re-render: When the state changes, React will re-render the component to reflect the changes.
+How to Use State:
+To manage state in functional components, React provides the useState hook. Here's a simple example of a component that manages a counter:
+
+import { useState } from 'react';
+
+function Counter() {
+  const [count, setCount] = useState(0); // Initial state value is 0
+
+  const handleIncrement = () => {
+    setCount(count + 1); // Update the state
+  };
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={handleIncrement}>Increment</button>
+    </div>
+  );
+}
+
+export default Counter;
+
+
+What are Props?
+Props (short for "properties") are used to pass data from one component to another. Props are immutable, meaning they cannot be changed by the receiving component.
+
+Key Points:
+Passed from parent to child: Props allow parent components to send data down to child components.
+Immutable: Once passed to a component, the props cannot be modified by the component.
+Read-only: A component can read and display props, but it cannot alter them.
+How to Use Props:
+Here’s an example of passing props from a parent to a child component:
+
+function Greeting(props) {
+  return <h1>Hello, {props.name}!</h1>;
+}
+
+function App() {
+  return (
+    <div>
+      <Greeting name="Alice" />
+      <Greeting name="Bob" />
+    </div>
+  );
+}
+
+export default App;
+
+
+
+Setting Default Props in React Components
+In React, you can define default props for your components. Default props allow you to specify fallback values in case no props are provided.
+
+function Greeting({ name = "Stranger" }) {
+  return <h1>Hello, {name}!</h1>;
+}
+
+Greeting.defaultProps = {
+  name: "Stranger",
+};
+In this example, if no name prop is passed, it will default to "Stranger."
+
+
+
