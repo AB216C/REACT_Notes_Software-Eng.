@@ -1,0 +1,9 @@
+.card2 {
+  background-color:rgb(20,56,80);
+  margin:20px;
+  padding:20px;
+  color:white;
+  text-align:left;
+  border-radius: 2px solid black;
+  min-width:200px;
+}
