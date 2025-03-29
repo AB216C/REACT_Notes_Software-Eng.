@@ -31,7 +31,7 @@ function DogDisplay() {
 
   return (
     <div>
-      <h1>Random Dog Image</h1>
+      <h1>Random Dog 😍 Image</h1>
       <img src={dogImage} style= {{width:"300px", height:"auto"}}></img>
     </div>
   )

@@ -1,6 +1,7 @@
-import Coffees from "./CoffeesType"
-import Teas from "./TeasType"
-import Pastries from "./PastriesType"
+
+import Coffees from "./Components/CoffeesType"
+import Pastries from "./Components/PastriesType"
+import Teas from "./Components/TeasType"
 import "./Menu.css"
 
 
